@@ -1,25 +1,52 @@
-import time
+#python3 -m pip install --upgrade termcolor
+import math, sys, random, json, time
+from termcolor import colored, cprint
+
+pos = float(0)
+
+wpm = 65 #wpm
+def Type(t): #Word typing control
+    for l in t:
+        sys.stdout.write(l)
+        sys.stdout.flush()
+        time.sleep(random.random()*10.0/wpm)
+
+def qBasic():
+    #while True:
+    while True:
+        temp = input("\n⇥   ")
+        match temp:
+            case "1":
+                pos = tempPos1
+                return pos
+            case "2":
+                pos = tempPos2
+                return pos
+            case "3":
+                pos = tempPos3
+                return pos    
+            case "4":
+                pos = tempPos4
+                return pos
+            case _:
+                print("\nInvalid")
 
 
-
-while True:
-    x = input('⇥', end='\r')
-    time.sleep(1)
-    x = input(' ', end='\r')
-    time.sleep(1)
+while True: #Pos 0
     
-
-while True:
-            temp = input("\n⇥   ")
-            match temp:
-                case "1":
-                    pos = 1
-                    break
-                case "2":
-                    pos = 0.1
-                    break
-                case "3":
-                    pos = 0.2
-                    break    
-                case _:
-                    print("\nInvalid\n")
+    if pos == 0:
+        print("You find yourself on a rocky path in front of a slightly weathered, red bricked house")
+        print("\n1)Walk inside\n2)Continue path left\n3)Continue path right")
+        tempPos1 = 1
+        tempPos2 = 0.1
+        tempPos3 = 0.2
+        pos = qBasic()
+    if pos == 1:
+        print("You find yourself at the entrance of the house")
+        print("\n1)Head upstairs\n2)Head straight towards kitchen\n3)Turn right to the living room\n4)Exit the house")
+        tempPos1 = 1.2
+        tempPos2 = 1.11
+        tempPos2 = 1.12
+        tempPos4 = 0
+        qBasic()
+        pos = qBasic()

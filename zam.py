@@ -12,6 +12,7 @@ def Type(t): #Word typing control
         time.sleep(random.random()*10.0/wpm)
 
 def qBasic():
+    #while True:
     while True:
         temp = input("\n⇥   ")
         match temp:
@@ -47,7 +48,6 @@ while True: #Pos 0
         tempPos1 = 1
         tempPos2 = 0.1
         tempPos3 = 0.2
-        qBasic()
         pos = qBasic()
     if pos == 1:
         Type("You find yourself at the entrance of the house")
@@ -56,5 +56,4 @@ while True: #Pos 0
         tempPos2 = 1.11
         tempPos2 = 1.12
         tempPos4 = 0
-        qBasic()
         pos = qBasic()
