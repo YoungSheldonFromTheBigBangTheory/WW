@@ -12,12 +12,6 @@ def Type(t): #Word typing control
         time.sleep(random.random()*10.0/wpm)
 
 def qBasic(q):
-    while True:
-        print('⇥', end='\r')
-        time.sleep(1)
-        print(' ', end='\r')
-        time.sleep(1)
-
         temp = input("\n⇥")
 
 while True: #Start Game
@@ -29,10 +23,23 @@ while True: #Start Game
         sys.exit("Ok then")
     Type("Um what?")
 
-print(pos)
-
 while True:
     if pos == 0:
         Type("You find yourself on a rocky path in front of a slightly weathered, red bricked house")
         Type("\n1)Walk inside\n2)Continue path left\n3)Continue path right")
-        
+        while True:
+            temp = input("\n⇥   ")
+            match temp:
+                case "1":
+                    pos = 1
+                    break
+                case "2":
+                    pos = 0.1
+                    break
+                case "3":
+                    pos = 0.2
+                    break    
+                case _:
+                    print("\nInvalid\n")
+    break
+print(pos)

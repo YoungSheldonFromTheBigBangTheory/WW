@@ -1,11 +1,12 @@
 import time
 
 
-def qBasic(q):
-    while True:
-        print('⇥', end='\r')
-        time.sleep(1)
-        print(' ', end='\r')
-        time.sleep(1)
-    temp = input("\n⇥")
+
+while True:
+    x = input('⇥', end='\r')
+    time.sleep(1)
+    x = input(' ', end='\r')
+    time.sleep(1)
+    
+
         
