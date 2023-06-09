@@ -80,11 +80,15 @@ while True: #Pos 0
         tempPos3 = 1.12 #Turn right to living room
         tempPos4 = 1 #Return to entrance
         pos = qBasic()
-    if pos == 1.12: #Living Room
-        Type("The hard wood creaks below you as you enter the living room. You aproach the window and look outside. It is dark.")
-        Type("\n1)Look outside\n2)Go to kitchen\n3)Return to entrance")
-        tempPos1 = 1.21 #Look outside
-        tempPos2 = 1.11 #Go to kitchen
-        tempPos3 = 1.12 #Return to entrance
-        tempPos4 = 1989 #Does nothing
-        pos = qBasic()
+    if True: #Living Room
+        if pos == 1.12: #Living Room
+            Type("The hard wood creaks below you as you enter the living room. Their are empty shelves to your right & and window to your left.")
+            Type("\n1)Look outside\n2)Go to kitchen\n3)Return to entrance")
+            tempPos1 = 1.121 #Look outside
+            tempPos2 = 1.11 #Go to kitchen
+            tempPos3 = 1.12 #Return to entrance
+            tempPos4 = 1989 #Does nothing
+            pos = qBasic()
+        if pos == 1.121: #Window in Living Room
+            Type("You approach the window and look outside. It is dark. You see the faint outlines of trees")
+            Type("\n1)Look outside\n2)Go to kitchen\n3)Return to entrance")

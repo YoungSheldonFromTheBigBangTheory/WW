@@ -1,0 +1,8 @@
+[
+{"pos": "1", "newPos": ["pos2", "pos3", "pos4"], "updtPos": {"pos2": "pos2", "pos3": "pos3", "pos4": "pos4"}
+
+},
+
+{"pos": "2", "newPos": ["pos3", "pos4", "pos1"], "return": "return"}
+
+]
